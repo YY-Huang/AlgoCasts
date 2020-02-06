@@ -12,9 +12,7 @@ function reverse(str) {
 	//return str.split('').reverse().join('');
     
 	// Method 2
-	return str.split('').reduce((reversed, char) => {
-		return char + reversed;
-	}, '');
+	return str.split('').reduce((reversed, char) => char + reversed);
 }
 
 module.exports = reverse;
