@@ -11,7 +11,11 @@
 function reverseInt(n) {
 	let reversed = n.toString().split('').reverse().join('');
     
-	return n < 0 ? parseInt(reversed) * -1 : parseInt(reversed);
+	// Method 1
+	//return n < 0 ? parseInt(reversed) * -1 : parseInt(reversed);
+    
+	//Method 2
+	return parseInt(reversed) * Math.sign(n);
 }
 
 module.exports = reverseInt;
