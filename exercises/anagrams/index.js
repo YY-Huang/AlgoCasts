@@ -18,6 +18,10 @@ function createCharMap(str) {
 	return charMap;
 }
 
+function cleanStr(str) {
+	return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+}
+
 function anagrams(stringA, stringB) {
 
 	// Method 1
@@ -36,6 +40,7 @@ function anagrams(stringA, stringB) {
     return true; */
     
 	//Method 2
+	return cleanStr(stringA) === cleanStr(stringB);
     
 }
 
