@@ -10,7 +10,7 @@
 function vowels(str) {
 
 	// Method 1
-	let count = 0;
+	/* let count = 0;
 	const vowels = ['a', 'e', 'i', 'o', 'u'];
 
 	for (let char of str.toLowerCase()) {
@@ -18,7 +18,11 @@ function vowels(str) {
 			count++;
 		}
 	}
-	return count;
+    return count; */
+    
+	// Method 2
+	const matches = str.match(/[aeiou]/gi); // returns null if no matches found
+	return matches ? matches.lengths : 0;
 }
 
 module.exports = vowels;
