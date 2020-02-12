@@ -17,7 +17,7 @@
 //       '### '
 //       '####'
 
-function steps(n) {
+function steps(n, row = 0, stair = '') {
 
 	// Method 1
 	/* for (let i = 0; i < n; i++) {
@@ -32,6 +32,22 @@ function steps(n) {
 		console.log(stair);
     } */
     
+	//Method 2
+	if (n === row) {
+		return;
+	}
+    
+	if (n === stair.length) {
+		console.log(stair);
+		return steps(n, row + 1);
+	}
+    
+	if (stair.length <= row) {
+		stair += '#';
+	} else {
+		stair += ' ';
+	}
+	steps(n, row, stair);
 }
 
 module.exports = steps;
