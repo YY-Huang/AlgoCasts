@@ -20,8 +20,14 @@ function fib(n) {
 		result.push(a+b);
 	}
 
-	return result[n]; */
+    return result[n]; */
+    
+	// Method 2 - Recursion
 
+	if (n < 2) {
+		return n;
+	}
+	return fib(n-1) + fib(n-2);
 }
 
 module.exports = fib;
