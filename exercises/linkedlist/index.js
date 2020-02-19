@@ -35,17 +35,17 @@ class LinkedList {
     
 	getLast() {
 		let node = this.head;
-		let last;
         
 		if (!node) {
 			return null;
 		}
         
 		while(node) {
-			last = node;
+			if (!node.next) {
+				return node;
+			}
 			node = node.next;
 		}
-		return last;
 	}
 }
 
