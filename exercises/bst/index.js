@@ -42,7 +42,7 @@ class Node {
 		} else if (this.data > data && this.left) {
 			return this.left.contains(data);
 		}
-        
+    
 		return null;
 	}
 
